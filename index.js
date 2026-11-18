@@ -39,5 +39,8 @@ const startServer = async () => {
   process.exit(1);
   }
 };
+app.listen(PORT, () => {
+  console.log(`\u{1F3E5} Drag Care Pharmacy Server is running on http://localhost:${PORT}`);
+});
 
 startServer();
