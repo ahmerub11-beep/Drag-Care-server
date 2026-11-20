@@ -30,17 +30,14 @@ app.use(consultRoutes);
 
 const startServer = async () => {
   try {
-  await connectDB();
-  app.listen(PORT, () => {
-    console.log(`\u{1F3E5} Drag Care Pharmacy Server is running on http://localhost:${PORT}`);
-  });
+    await connectDB();
+    app.listen(PORT, () => {
+      console.log(`\u{1F3E5} Drag Care Pharmacy Server is running on http://localhost:${PORT}`);
+    });
   } catch (error) {
-  console.error(`API startup aborted: ${error.message}`);
-  process.exit(1);
+    console.error(`API startup aborted: ${error.message}`);
+    process.exit(1);
   }
 };
-app.listen(PORT, () => {
-  console.log(`\u{1F3E5} Drag Care Pharmacy Server is running on http://localhost:${PORT}`);
-});
 
 startServer();
